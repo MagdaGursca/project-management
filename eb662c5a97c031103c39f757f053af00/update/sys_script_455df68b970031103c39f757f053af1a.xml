@@ -29,32 +29,43 @@
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
 
-    var timeEntry = current;
+    var loggingValue = gs.getProperty('x_1027698_project.calculation_enabled');
+    
+    if (loggingValue == 'true') {
+        
+        var timeEntry = current;
 
-    var projectId = timeEntry.project;
-    var hours = timeEntry.actual_worked_hours.getDisplayValue();
-    var hourSplit = hours.split(":");
-    var totalHours = parseInt(hourSplit[0]) + parseInt(hourSplit[1]) / 60;
-    var hourlyRate = timeEntry.hourly_rate;
+        var projectId = timeEntry.project;
+        var hours = timeEntry.actual_worked_hours.getDisplayValue();
+        var hourSplit = hours.split(":");
+        var totalHours = parseInt(hourSplit[0]) + parseInt(hourSplit[1]) / 60;
+        var hourlyRate = timeEntry.hourly_rate;
 
-    var cost = hourlyRate * totalHours;
+        var cost = hourlyRate * totalHours;
+        
+        gs.info('Logging is enabled. Total Hours for Time Entry: ' + totalHours);
 
-    var project = new GlideRecord('x_1027698_project_project');
-    if (project.get(projectId)) {
-        if (project.state != 3 && project.state != 4 && project.state != 7) {
-            project.total_cost = project.total_cost + cost;
-            project.update();
+        var project = new GlideRecord('x_1027698_project_project');
+        if (project.get(projectId)) {
+            if (project.state != 3 && project.state != 4 && project.state != 7) {
+                project.total_cost = project.total_cost + cost;
+                project.update();
+            }
         }
+
+    } else if (loggingValue == 'false') {
+        gs.error('Logging is disabled. Total hours cannot be calculated.');
+    } else {
+        gs.warn('Logging is in an unknown state. Total hours cannot be calculated.');
     }
-})(current, previous);
-]]></script>
+})(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-07-20 05:46:29</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>455df68b970031103c39f757f053af1a</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>Automatic calculation of project cost</sys_name>
         <sys_overrides/>
         <sys_package display_value="Project Management App" source="x_1027698_project">eb662c5a97c031103c39f757f053af00</sys_package>
@@ -62,7 +73,7 @@
         <sys_scope display_value="Project Management App">eb662c5a97c031103c39f757f053af00</sys_scope>
         <sys_update_name>sys_script_455df68b970031103c39f757f053af1a</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-07-20 06:33:36</sys_updated_on>
+        <sys_updated_on>2023-07-20 10:56:55</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>
