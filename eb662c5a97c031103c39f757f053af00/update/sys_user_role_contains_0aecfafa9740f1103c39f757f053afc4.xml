@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains">
+    <sys_user_role_contains action="INSERT_OR_UPDATE">
+        <contains display_value="x_1027698_project.project_admin" name="x_1027698_project.project_admin">7854515297c431103c39f757f053af62</contains>
+        <role display_value="x_1027698_project.project_manager" name="x_1027698_project.project_manager">dae05a76978cb1103c39f757f053af90</role>
+        <sys_class_name>sys_user_role_contains</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-19 11:05:10</sys_created_on>
+        <sys_id>0aecfafa9740f1103c39f757f053afc4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1027698_project.project_admin.x_1027698_project.project_manager</sys_name>
+        <sys_package display_value="Project Management App" source="x_1027698_project">eb662c5a97c031103c39f757f053af00</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Project Management App">eb662c5a97c031103c39f757f053af00</sys_scope>
+        <sys_update_name>sys_user_role_contains_0aecfafa9740f1103c39f757f053afc4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-19 11:05:10</sys_updated_on>
+    </sys_user_role_contains>
+</record_update>

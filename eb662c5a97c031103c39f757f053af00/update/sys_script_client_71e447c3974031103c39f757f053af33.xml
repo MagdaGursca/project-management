@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Prevents creating a project with a state of Closed Complete, Closed Incomplete, or Closed Skipped.</description>
+        <field/>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Project State Validation</name>
+        <order/>
+        <script><![CDATA[function onSubmit() {
+	
+   var state = g_form.getValue('state');
+   if (state == '3' || state == '4' || state == '7') {
+      g_form.addErrorMessage('You cannot submit this record with a state of Closed Complete, Closed Incomplete, or Closed Skipped.');
+      return false;
+   }
+   return true;
+}
+]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-20 06:20:31</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>71e447c3974031103c39f757f053af33</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Project State Validation</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Project Management App" source="x_1027698_project">eb662c5a97c031103c39f757f053af00</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Project Management App">eb662c5a97c031103c39f757f053af00</sys_scope>
+        <sys_update_name>sys_script_client_71e447c3974031103c39f757f053af33</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-20 06:20:31</sys_updated_on>
+        <table>x_1027698_project_project</table>
+        <type>onSubmit</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

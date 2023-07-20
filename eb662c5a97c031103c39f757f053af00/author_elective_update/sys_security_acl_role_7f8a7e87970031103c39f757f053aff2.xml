@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="DELETE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-20 05:33:23</sys_created_on>
+        <sys_id>7f8a7e87970031103c39f757f053aff2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>.x_1027698_project.resource_user</sys_name>
+        <sys_package display_value="Project Management App" source="x_1027698_project">eb662c5a97c031103c39f757f053af00</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Project Management App">eb662c5a97c031103c39f757f053af00</sys_scope>
+        <sys_security_acl display_value="">f78a7e87970031103c39f757f053aff2</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_7f8a7e87970031103c39f757f053aff2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-20 05:33:23</sys_updated_on>
+        <sys_user_role display_value="x_1027698_project.resource_user" name="x_1027698_project.resource_user">9b3fa416970431103c39f757f053af37</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Project Management App">eb662c5a97c031103c39f757f053af00</application>
+        <file_path/>
+        <instance_id>b6be5718db9195149df22f17d4961918</instance_id>
+        <instance_name>dev131217</instance_name>
+        <name>sys_security_acl_role_7f8a7e87970031103c39f757f053aff2</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_class_name>sys_security_acl_role</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-07-20 05:33:23</sys_created_on><sys_id>7f8a7e87970031103c39f757f053aff2</sys_id><sys_mod_count>0</sys_mod_count><sys_name>.x_1027698_project.resource_user</sys_name><sys_package display_value="Project Management App" source="x_1027698_project">eb662c5a97c031103c39f757f053af00</sys_package><sys_policy/><sys_scope display_value="Project Management App">eb662c5a97c031103c39f757f053af00</sys_scope><sys_security_acl display_value="">f78a7e87970031103c39f757f053aff2</sys_security_acl><sys_update_name>sys_security_acl_role_7f8a7e87970031103c39f757f053aff2</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-07-20 05:33:23</sys_updated_on><sys_user_role display_value="x_1027698_project.resource_user" name="x_1027698_project.resource_user">9b3fa416970431103c39f757f053af37</sys_user_role><transaction_id/></sys_security_acl_role></record_update>]]></payload>
+        <payload_hash>1930508022</payload_hash>
+        <record_name>.x_1027698_project.resource_user</record_name>
+        <reverted_from/>
+        <source>3f662c5a97c031103c39f757f053af02</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-20 05:33:24</sys_created_on>
+        <sys_id>409a7e87970031103c39f757f053aff5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18971c9e4d70000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-20 05:33:24</sys_updated_on>
+        <type>Access Roles</type>
+        <update_guid>889a7e87a800311022936723a8ca06f4</update_guid>
+        <update_guid_history>889a7e87a800311022936723a8ca06f4:1930508022</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value=".x_1027698_project.resource_user">37bab2c7970031103c39f757f053af96</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-20 05:34:12</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl_role">sys_security_acl_role</sys_db_object>
+        <sys_id>00a413c4901044f09787b60b7a2b2869</sys_id>
+        <sys_metadata>7f8a7e87970031103c39f757f053aff2</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>.x_1027698_project.resource_user</sys_name>
+        <sys_package display_value="Project Management App" source="x_1027698_project">eb662c5a97c031103c39f757f053af00</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Project Management App">eb662c5a97c031103c39f757f053af00</sys_scope>
+        <sys_scope_delete display_value="">01ce48bcae7545e0807f064a9e83f239</sys_scope_delete>
+        <sys_update_name>sys_security_acl_role_7f8a7e87970031103c39f757f053aff2</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_role_7f8a7e87970031103c39f757f053aff2">409a7e87970031103c39f757f053aff5</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-20 05:34:12</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

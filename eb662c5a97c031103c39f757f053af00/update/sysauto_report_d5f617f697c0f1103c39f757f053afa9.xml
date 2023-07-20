@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_report">
+    <sysauto_report action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <address_list/>
+        <business_calendar/>
+        <condition/>
+        <conditional>false</conditional>
+        <entered_time/>
+        <group_list/>
+        <include_detail>false</include_detail>
+        <include_with/>
+        <name>Scheduled execution of Over-budget Projects</name>
+        <offset/>
+        <offset_type>0</offset_type>
+        <omit_if_no_records>true</omit_if_no_records>
+        <output_type>PDF-landscape</output_type>
+        <page_height_in_pixels>612</page_height_in_pixels>
+        <page_size>Letter</page_size>
+        <page_width_in_pixels>792</page_width_in_pixels>
+        <report display_value="Over-budget Projects">76e4dfb697c0f1103c39f757f053afe2</report>
+        <report_body><![CDATA[<p><span style="font-family: 'book antiqua', palatino; font-size: 12pt;">Dear Project Manager,</span></p>
+<p><span style="font-family: 'book antiqua', palatino; font-size: 12pt;">I hope this message finds you well.</span></p>
+<p><span style="font-family: 'book antiqua', palatino; font-size: 12pt;">Please find attached the weekly report of all projects currently running over budget. We kindly ask you to review this report as it details the financial status of your current projects.</span></p>
+<p><span style="font-family: 'book antiqua', palatino; font-size: 12pt;">We encourage you to reach out to the finance department or the specific project teams if you have any questions, need further clarification, or wish to discuss potential solutions to bring these projects back on track.</span></p>
+<p><span style="font-family: 'book antiqua', palatino; font-size: 12pt;">We understand the complexities involved in managing projects and we're here to support you in ensuring their success. Please do not hesitate to reach out if you need further assistance or have any concerns.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'book antiqua', palatino; font-size: 12pt;">Best regards,</span></p>
+<p><span style="font-family: 'book antiqua', palatino; font-size: 12pt;">Financial Department</span></p>
+<p>&nbsp;</p>
+<p><em><span style="font-family: 'book antiqua', palatino; font-size: 12pt;">This is an automatically sent message! If there are no records this message will not be sent!</span></em></p>]]></report_body>
+        <report_title>Weekly Over-Budget Project Report</report_title>
+        <run_as display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>5</run_dayofweek>
+        <run_period/>
+        <run_start>2023-07-19 12:58:59</run_start>
+        <run_time>1970-01-01 12:00:00</run_time>
+        <run_type>weekly</run_type>
+        <sys_class_name>sysauto_report</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-19 13:19:37</sys_created_on>
+        <sys_id>d5f617f697c0f1103c39f757f053afa9</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Scheduled execution of Over-budget Projects</sys_name>
+        <sys_package display_value="Project Management App" source="x_1027698_project">eb662c5a97c031103c39f757f053af00</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Project Management App">eb662c5a97c031103c39f757f053af00</sys_scope>
+        <sys_update_name>sysauto_report_d5f617f697c0f1103c39f757f053afa9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-19 13:45:45</sys_updated_on>
+        <time_zone/>
+        <upgrade_safe>false</upgrade_safe>
+        <user_list>6816f79cc0a8016401c5a33be04be441,36cfae7a9700f1103c39f757f053afc5</user_list>
+        <zip>false</zip>
+    </sysauto_report>
+</record_update>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>assignment_description</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Set Hourly Rate Based on Assignment Desc</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading) {
+    if (isLoading) {
+        return;
+    }
+    
+    switch (newValue) {
+        case 'junior developer':
+            g_form.setValue('hourly_rate', '8.00');
+            break;
+        case 'senior developer':
+            g_form.setValue('hourly_rate', '20.00');
+            break;
+        case 'architect':
+            g_form.setValue('hourly_rate', '30.00');
+            break;
+        default:
+            g_form.setValue('hourly_rate', '0');
+            break;
+    }
+}
+]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-18 12:13:23</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c1824ee2970c71103c39f757f053af92</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Set Hourly Rate Based on Assignment Desc</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Project Management App" source="x_1027698_project">eb662c5a97c031103c39f757f053af00</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Project Management App">eb662c5a97c031103c39f757f053af00</sys_scope>
+        <sys_update_name>sys_script_client_c1824ee2970c71103c39f757f053af92</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-18 13:00:09</sys_updated_on>
+        <table>x_1027698_project_time_entry</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

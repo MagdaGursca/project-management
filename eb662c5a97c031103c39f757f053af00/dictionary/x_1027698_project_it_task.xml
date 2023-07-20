@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="4f1bac9e97c031103c39f757f053af7b" extends="task" label="Project Task" max_length="40" name="x_1027698_project_it_task" type="collection">
+        <element label="Parent Task" max_length="32" name="parent_task" reference="x_1027698_project_it_task" type="reference"/>
+        <element label="Project" max_length="32" name="project" reference="x_1027698_project_project" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Task Name" mandatory="true" max_length="40" name="u_string_1" type="string"/>
+    </element>
+</database>

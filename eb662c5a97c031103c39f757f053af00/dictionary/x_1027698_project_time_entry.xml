@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="967960de97c031103c39f757f053af0e" label="Time Entry" max_length="40" name="x_1027698_project_time_entry" type="collection">
+        <element label="Actual worked hours" mandatory="true" max_length="40" name="actual_worked_hours" type="glide_time"/>
+        <element label="Allocated hours" max_length="40" name="allocated_hours" type="glide_time"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Assignment Description" mandatory="true" max_length="40" name="assignment_description" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Junior Developer" sequence="0" value="junior developer"/>
+                <element inactive_on_update="false" label="Senior Developer" sequence="1" value="senior developer"/>
+                <element inactive_on_update="false" label="Architect" sequence="2" value="architect"/>
+            </choice>
+        </element>
+        <element label="Description" max_length="4000" name="description" type="string"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;switch (current.assignment_description) {&#13;&#10;        case 'junior developer':&#13;&#10;            return 8.00;&#13;&#10;        case 'senior developer':&#13;&#10;            return 20.00;&#13;&#10;        case 'architect':&#13;&#10;            return 30.00;&#13;&#10;        default:&#13;&#10;            return 0;&#13;&#10;    }&#13;&#10;})(current);" label="Hourly rate" max_length="20" name="hourly_rate" type="currency"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>
+        <element label="Project" mandatory="true" max_length="32" name="project" reference="x_1027698_project_project" type="reference"/>
+        <element label="Resource" mandatory="true" max_length="32" name="resource" reference="x_1027698_project_resource" type="reference"/>
+        <element label="Task" mandatory="true" max_length="32" name="task" reference="x_1027698_project_it_task" type="reference"/>
+        <index name="index">
+            <element name="project"/>
+        </index>
+        <index name="index2">
+            <element name="resource"/>
+        </index>
+        <index name="index3">
+            <element name="task"/>
+        </index>
+    </element>
+</database>

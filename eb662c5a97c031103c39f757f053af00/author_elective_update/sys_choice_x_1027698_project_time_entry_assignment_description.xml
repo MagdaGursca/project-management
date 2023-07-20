@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="assignment_description" table="x_1027698_project_time_entry" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>assignment_description</element>
+            <name>x_1027698_project_time_entry</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-07-18 06:09:21</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>assignment_description</sys_name>
+            <sys_package display_value="Project Management App" source="x_1027698_project">eb662c5a97c031103c39f757f053af00</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Project Management App">eb662c5a97c031103c39f757f053af00</sys_scope>
+            <sys_update_name>sys_choice_x_1027698_project_time_entry_assignment_description</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-07-18 06:09:21</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>assignment_description</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Junior Developer</label>
+            <language>en</language>
+            <name>x_1027698_project_time_entry</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-07-18 06:09:21</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>479f6c26978471103c39f757f053af0f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-07-18 06:09:21</sys_updated_on>
+            <value>junior developer</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>assignment_description</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Senior Developer</label>
+            <language>en</language>
+            <name>x_1027698_project_time_entry</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-07-18 06:09:21</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>839f6c26978471103c39f757f053af11</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-07-18 06:09:21</sys_updated_on>
+            <value>senior developer</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>assignment_description</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Architect</label>
+            <language>en</language>
+            <name>x_1027698_project_time_entry</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-07-18 06:09:21</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>039f6c26978471103c39f757f053af12</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-07-18 06:09:21</sys_updated_on>
+            <value>architect</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>
