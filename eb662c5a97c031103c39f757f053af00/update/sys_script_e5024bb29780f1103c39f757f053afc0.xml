@@ -29,13 +29,8 @@
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
     if (current.state.changesTo(3)) {
-        var taskGR = new GlideRecord('x_1027698_project_it_task');
-        taskGR.addQuery('project', current.sys_id);
-        taskGR.query();
-        while (taskGR.next()) {
-            taskGR.state = 3;
-            taskGR.update();
-        }
+		
+        new UpdateProjectStatus().updateStatus(current.sys_id);
     }
 })(current, previous);
 ]]></script>
@@ -45,7 +40,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>e5024bb29780f1103c39f757f053afc0</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>Updates status to Closed Complete</sys_name>
         <sys_overrides/>
         <sys_package display_value="Project Management App" source="x_1027698_project">eb662c5a97c031103c39f757f053af00</sys_package>
@@ -53,7 +48,7 @@
         <sys_scope display_value="Project Management App">eb662c5a97c031103c39f757f053af00</sys_scope>
         <sys_update_name>sys_script_e5024bb29780f1103c39f757f053afc0</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-07-19 12:14:28</sys_updated_on>
+        <sys_updated_on>2023-07-20 11:33:31</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>

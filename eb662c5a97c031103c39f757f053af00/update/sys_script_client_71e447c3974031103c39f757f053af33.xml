@@ -12,21 +12,22 @@
         <order/>
         <script><![CDATA[function onSubmit() {
 	
-   var state = g_form.getValue('state');
-   if (state == '3' || state == '4' || state == '7') {
-      g_form.addErrorMessage('You cannot submit this record with a state of Closed Complete, Closed Incomplete, or Closed Skipped.');
-      return false;
-   }
-   return true;
-}
-]]></script>
+    if (g_form.isNewRecord()) {
+        var state = g_form.getValue('state');
+        if (state == '3' || state == '4' || state == '7') {
+            g_form.addErrorMessage('You cannot submit this record with a state of Closed Complete, Closed Incomplete, or Closed Skipped.');
+            return false;
+        }
+    }
+    return true;
+}]]></script>
         <sys_class_name>sys_script_client</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-07-20 06:20:31</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>71e447c3974031103c39f757f053af33</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>Project State Validation</sys_name>
         <sys_overrides/>
         <sys_package display_value="Project Management App" source="x_1027698_project">eb662c5a97c031103c39f757f053af00</sys_package>
@@ -34,7 +35,7 @@
         <sys_scope display_value="Project Management App">eb662c5a97c031103c39f757f053af00</sys_scope>
         <sys_update_name>sys_script_client_71e447c3974031103c39f757f053af33</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-07-20 06:20:31</sys_updated_on>
+        <sys_updated_on>2023-07-20 11:40:15</sys_updated_on>
         <table>x_1027698_project_project</table>
         <type>onSubmit</type>
         <ui_type>0</ui_type>

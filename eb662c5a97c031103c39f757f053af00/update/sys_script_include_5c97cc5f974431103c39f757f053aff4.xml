@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_1027698_project.ProjectCost</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>ProjectCost</name>
+        <script><![CDATA[var ProjectCost = Class.create();
+ProjectCost.prototype = {
+    initialize: function() {
+    },
+    
+    calculateCost: function(timeEntry) {
+        var loggingValue = gs.getProperty('x_1027698_project.calculation_enabled');
+        
+        if (loggingValue == 'true') {
+            var projectId = timeEntry.project;
+            var hours = timeEntry.actual_worked_hours.getDisplayValue();
+            var hourSplit = hours.split(":");
+            var totalHours = parseInt(hourSplit[0]) + parseInt(hourSplit[1]) / 60;
+            var hourlyRate = timeEntry.hourly_rate;
+    
+            var cost = hourlyRate * totalHours;
+            
+            gs.info('Logging is enabled. Total Hours for Time Entry: ' + totalHours);
+    
+            var project = new GlideRecord('x_1027698_project_project');
+            if (project.get(projectId)) {
+                if (project.state != 3 && project.state != 4 && project.state != 7) {
+                    project.total_cost = project.total_cost + cost;
+                    project.update();
+                }
+            }
+    
+        } else if (loggingValue == 'false') {
+            gs.error('Logging is disabled. Total hours cannot be calculated.');
+        } else {
+            gs.warn('Logging is in an unknown state. Total hours cannot be calculated.');
+        }
+    },
+    
+    type: 'ProjectCost'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-20 11:17:46</sys_created_on>
+        <sys_id>5c97cc5f974431103c39f757f053aff4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ProjectCost</sys_name>
+        <sys_package display_value="Project Management App" source="x_1027698_project">eb662c5a97c031103c39f757f053af00</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Project Management App">eb662c5a97c031103c39f757f053af00</sys_scope>
+        <sys_update_name>sys_script_include_5c97cc5f974431103c39f757f053aff4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-20 11:17:46</sys_updated_on>
+    </sys_script_include>
+</record_update>
