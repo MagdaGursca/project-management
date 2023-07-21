@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category">
+    <sys_properties_category action="INSERT_OR_UPDATE">
+        <name>Calculation of the Total cost</name>
+        <sys_class_name>sys_properties_category</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-21 05:15:25</sys_created_on>
+        <sys_id>630f33d7978471103c39f757f053af43</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Calculation of the Total cost</sys_name>
+        <sys_package display_value="Project Management App" source="x_1027698_project">eb662c5a97c031103c39f757f053af00</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Project Management App">eb662c5a97c031103c39f757f053af00</sys_scope>
+        <sys_update_name>sys_properties_category_630f33d7978471103c39f757f053af43</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-21 05:43:00</sys_updated_on>
+        <title><![CDATA[<p><span style="font-size: 14pt; font-family: &#39;book antiqua&#39;, palatino;">Calculation of the Total cost</span></p>
+<p><span style="font-size: 12pt; font-family: &#39;book antiqua&#39;, palatino;">System property to determine the level message in the system logs</span></p>]]></title>
+    </sys_properties_category>
+    <sys_translated_text action="delete_multiple" query="documentkey=630f33d7978471103c39f757f053af43"/>
+</record_update>

@@ -10,50 +10,68 @@
         <script><![CDATA[var ProjectCost = Class.create();
 ProjectCost.prototype = {
     initialize: function() {
+        this._log = gs.getProperty('x_1027698_project.logging.verbosity', 'off');
     },
     
-    calculateCost: function(timeEntry) {
-        var loggingValue = gs.getProperty('x_1027698_project.calculation_enabled');
-        
-        if (loggingValue == 'true') {
-            var projectId = timeEntry.project;
-            var hours = timeEntry.actual_worked_hours.getDisplayValue();
-            var hourSplit = hours.split(":");
-            var totalHours = parseInt(hourSplit[0]) + parseInt(hourSplit[1]) / 60;
-            var hourlyRate = timeEntry.hourly_rate;
-    
-            var cost = hourlyRate * totalHours;
-            
-            gs.info('Logging is enabled. Total Hours for Time Entry: ' + totalHours);
-    
-            var project = new GlideRecord('x_1027698_project_project');
-            if (project.get(projectId)) {
-                if (project.state != 3 && project.state != 4 && project.state != 7) {
-                    project.total_cost = project.total_cost + cost;
-                    project.update();
-                }
+    debug: function(message) {
+        if (this._log === 'debug') {
+            gs.debug(message);
+        }
+    },
+
+    info: function(message) {
+        if (this._log === 'debug' || this._log === 'info') {
+            gs.info(message);
+        }
+    },
+
+    warn: function(message) {
+        if (this._log === 'debug' || this._log === 'info' || this._log === 'warn') {
+            gs.warn(message);
+        }
+    },
+
+    error: function(message) {
+        gs.error(message);
+    },
+
+    calculateCost: function(timeEntry) { 
+        var projectId = timeEntry.project;
+        var hours = timeEntry.actual_worked_hours.getDisplayValue();
+        var hourSplit = hours.split(":");
+        var totalHours = parseInt(hourSplit[0]) + parseInt(hourSplit[1]) / 60;
+        var hourlyRate = timeEntry.hourly_rate;
+        var cost = hourlyRate * totalHours;
+
+        this.debug('Calculating cost for project ' + projectId);
+        this.info('Hourly rate: ' + hourlyRate + ', total hours: ' + totalHours);
+
+        var project = new GlideRecord('x_1027698_project_project');
+        if (project.get(projectId)) {
+            if (project.state != 3 && project.state != 4 && project.state != 7) {
+                project.total_cost = project.total_cost + cost;
+                project.update();
+                this.info('Project cost updated: ' + project.total_cost);
+            } else {
+                this.warn('Cannot update project cost, state is ' + project.state);
             }
-    
-        } else if (loggingValue == 'false') {
-            gs.error('Logging is disabled. Total hours cannot be calculated.');
-        } else {
-            gs.debug('Logging is in an unknown state. Total hours cannot be calculated.');
         }
     },
     
     type: 'ProjectCost'
-};]]></script>
+};
+]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-07-20 11:17:46</sys_created_on>
         <sys_id>5c97cc5f974431103c39f757f053aff4</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>ProjectCost</sys_name>
         <sys_package display_value="Project Management App" source="x_1027698_project">eb662c5a97c031103c39f757f053af00</sys_package>
         <sys_policy/>
         <sys_scope display_value="Project Management App">eb662c5a97c031103c39f757f053af00</sys_scope>
         <sys_update_name>sys_script_include_5c97cc5f974431103c39f757f053aff4</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-07-20 12:37:38</sys_updated_on>
+        <sys_updated_on>2023-07-21 06:32:12</sys_updated_on>
     </sys_script_include>
 </record_update>
